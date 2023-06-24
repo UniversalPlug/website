@@ -29,14 +29,14 @@
             <label>E-Mail</label>
           </div>
           <div class="user-box">
-            <input type="text" id="uid" name="uid" required="">
+            <input type="text" id="username" name="username" required="">
             <label>Username</label>
           </div>
           <div class="user-box">
-            <input type="password" id="pwd" name="pwd" required="">
+            <input type="password" id="password" name="password" required="">
             <label>Password</label>
           </div>
-          <a type="submit" id="sighUp" value="Sign Up" name="signup_submit">
+          <a type="submit" id="signup" value="Sign Up" name="signup_submit">
             Submit
           </a>
         </form>
@@ -79,11 +79,11 @@
         const database = getDatabase(app);
         const analytics = getAnalytics(app);
 
-    sighUp.addEventListener('click',(e) =>{
+    signup.addEventListener('click',(e) =>{
 
       var email = document.getElementById("email").value;
-      var password = document.getElementById("pwd").value;
-      var username = document.getElementById("uid").value;
+      var password = document.getElementById("password").value;
+      var username = document.getElementById("username").value;
 
 
     createUserWithEmailAndPassword(auth, email, password)
